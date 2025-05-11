@@ -12,4 +12,32 @@
             android:id="@+id/action_welcomeFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.myapplication.GameFragment"
+        android:label="Juego">
+        <action
+            android:id="@+id/action_gameFragment_to_resultFragment"
+            app:destination="@id/resultFragment">
+            <argument
+                android:name="score"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.myapplication.ResultFragment"
+        android:label="Resultado">
+
+        <!-- Aquí es donde va el argumento -->
+        <argument
+            android:name="score"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_resultFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
 </navigation>
