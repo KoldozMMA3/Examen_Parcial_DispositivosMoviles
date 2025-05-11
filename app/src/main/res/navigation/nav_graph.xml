@@ -19,11 +19,7 @@
         android:label="Juego">
         <action
             android:id="@+id/action_gameFragment_to_resultFragment"
-            app:destination="@id/resultFragment">
-            <argument
-                android:name="score"
-                app:argType="integer" />
-        </action>
+            app:destination="@id/resultFragment" />
     </fragment>
 
     <fragment
@@ -31,7 +27,6 @@
         android:name="com.example.myapplication.ResultFragment"
         android:label="Resultado">
 
-        <!-- Aquí es donde va el argumento -->
         <argument
             android:name="score"
             app:argType="integer" />

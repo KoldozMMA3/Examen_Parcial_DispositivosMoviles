@@ -1,12 +1,17 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.navigation.safe.args)
 }
 
 android {
     namespace = "com.example.myapplication"
     compileSdk = 35
 
+    buildFeatures {
+        viewBinding = true  //
+        dataBinding = true  //
+    }
     defaultConfig {
         applicationId = "com.example.myapplication"
         minSdk = 30
@@ -47,4 +52,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }
